@@ -1,0 +1,320 @@
+/*!
+ * Animate.css - https://animate.style/
+ * Version - 4.1.1
+ * Licensed under the MIT license - https://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2020 Animate.css
+ */
+ :root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+  }
+  
+  .animate__animated {
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+  }
+  
+  .animate__animated.animate__infinite {
+    animation-iteration-count: infinite;
+  }
+  
+  .animate__animated.animate__repeat-1 {
+    animation-iteration-count: var(--animate-repeat);
+  }
+  
+  .animate__animated.animate__repeat-2 {
+    animation-iteration-count: calc(var(--animate-repeat) * 2);
+  }
+  
+  .animate__animated.animate__repeat-3 {
+    animation-iteration-count: calc(var(--animate-repeat) * 3);
+  }
+  
+  .animate__animated.animate__delay-1s {
+    animation-delay: var(--animate-delay);
+  }
+  
+  .animate__animated.animate__delay-2s {
+    animation-delay: calc(var(--animate-delay) * 2);
+  }
+  
+  .animate__animated.animate__delay-3s {
+    animation-delay: calc(var(--animate-delay) * 3);
+  }
+  
+  .animate__animated.animate__delay-4s {
+    animation-delay: calc(var(--animate-delay) * 4);
+  }
+  
+  .animate__animated.animate__delay-5s {
+    animation-delay: calc(var(--animate-delay) * 5);
+  }
+  
+  .animate__animated.animate__faster {
+    animation-duration: calc(var(--animate-duration) / 2);
+  }
+  
+  .animate__animated.animate__fast {
+    animation-duration: calc(var(--animate-duration) * 0.8);
+  }
+  
+  .animate__animated.animate__slow {
+    animation-duration: calc(var(--animate-duration) * 2);
+  }
+  
+  .animate__animated.animate__slower {
+    animation-duration: calc(var(--animate-duration) * 3);
+  }
+  
+  @media (prefers-reduced-motion: reduce), (print) {
+    .animate__animated {
+      animation-duration: 1ms !important;
+      transition-duration: 1ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+  
+  /* Fading entrances */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate__fadeIn {
+    animation-name: fadeIn;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .animate__fadeInDown {
+    animation-name: fadeInDown;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .animate__fadeInLeft {
+    animation-name: fadeInLeft;
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .animate__fadeInRight {
+    animation-name: fadeInRight;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .animate__fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  /* Bouncing entrances */
+  @keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  
+  .animate__bounceIn {
+    animation-name: bounceIn;
+  }
+  
+  /* Zooming entrances */
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .animate__zoomIn {
+    animation-name: zoomIn;
+  }
+  
+  /* Sliding entrances */
+  @keyframes slideInDown {
+    from {
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .animate__slideInDown {
+    animation-name: slideInDown;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .animate__slideInLeft {
+    animation-name: slideInLeft;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .animate__slideInRight {
+    animation-name: slideInRight;
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .animate__slideInUp {
+    animation-name: slideInUp;
+  }
+  
+  /* Rotating entrances */
+  @keyframes rotateIn {
+    from {
+      transform: rotate3d(0, 0, 1, -200deg);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  .animate__rotateIn {
+    animation-name: rotateIn;
+    transform-origin: center;
+  }
+  
+  /* Specials */
+  @keyframes jackInTheBox {
+    from {
+      opacity: 0;
+      transform: scale(0.1) rotate(30deg);
+      transform-origin: center bottom;
+    }
+  
+    50% {
+      transform: rotate(-10deg);
+    }
+  
+    70% {
+      transform: rotate(3deg);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate__jackInTheBox {
+    animation-name: jackInTheBox;
+  }
